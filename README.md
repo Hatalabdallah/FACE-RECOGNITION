@@ -1,4 +1,5 @@
 # FACE-RECOGNITION
+
 Face recognition is a biometric technique that determines whether the image of a person's face matches any of the face images stored in a database.
 Face Recognition Attendance System for Employees using Python
 
@@ -22,7 +23,8 @@ Face Recognition Attendance System for Employees using Python
 
 
 4) System Description
-The system comprises 1 major module with their sub-modules as follows: 
+
+		The system comprises 1 major module with their sub-modules as follows: 
 
 	EMPLOYEE:
 	    • Register
