@@ -38,7 +38,7 @@ Using username and password
 	
   The waterfall model is a classical model used in the system development life cycle to create a system with a linear and sequential approach. It is termed a waterfall because the model develops systematically from one phase to another in a downward fashion. The waterfall approach does not define the process to go back to the previous phase to handle changes in requirements. The waterfall approach is the earliest approach that was used for software development.
 
-![alt text](https://github.com/Hatalabdallah/FACE-RECOGNITION/blob/main/waterfloor.jpg?raw=true)
+![waterfloor](https://user-images.githubusercontent.com/45793333/206803701-8db9d159-0e4d-4d76-8e40-b4a46266a674.jpg)
 
 
 6) System Requirements
