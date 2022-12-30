@@ -403,7 +403,7 @@ class Employee:
 
         else:
             try:
-                conn = mysql.connector.connect(host = 'localhost', username = 'root', password = '', database = 'facial_recognition_system')
+                conn = mysql.connector.connect(host = 'localhost', username = 'root', password = 'seensin', database = 'facial_recognition_system')
                 my_cursor = conn.cursor()
                 my_cursor.execute('insert into Employee values(%s, %s, %s,%s, %s, %s,%s, %s, %s,%s, %s, %s,%s, %s, %s)',(
 
@@ -434,7 +434,7 @@ class Employee:
 
     #-------------------------------fetch data--------------------------------------
     def fetch_data(self):
-        conn = mysql.connector.connect(host = 'localhost', username = 'root', password = '', database = 'facial_recognition_system')
+        conn = mysql.connector.connect(host = 'localhost', username = 'root', password = 'seensin', database = 'facial_recognition_system')
         my_cursor = conn.cursor()
         my_cursor.execute("select * from Employee")
         data = my_cursor.fetchall()
@@ -480,7 +480,7 @@ class Employee:
             try:
                 Update = messagebox.askyesno("Update", "Do you want to Update this Employee details", parent = self.root)
                 if Update > 0:
-                    conn = mysql.connector.connect(host = 'localhost', username = 'root', password = '', database = 'facial_recognition_system')
+                    conn = mysql.connector.connect(host = 'localhost', username = 'root', password = 'seensin', database = 'facial_recognition_system')
                     my_cursor = conn.cursor()
                     my_cursor.execute('update Employee set dep = %s, pos = %s, Year = %s, Status = %s, Name = %s, TIN = %s, Contact = %s, DOB = %s, Email = %s, Gender = %s, Address = %s, Hired = %s, End = %s, photo = %s where ID = %s',(
 
@@ -526,7 +526,7 @@ class Employee:
                 delete = messagebox.askyesno("Employee Delete Page", "Do you want to Delete this Employee", parent = self.root)
 
                 if delete > 0:
-                    conn = mysql.connector.connect(host = 'localhost', username = 'root', password = '', database = 'facial_recognition_system')
+                    conn = mysql.connector.connect(host = 'localhost', username = 'root', password = 'seensin', database = 'facial_recognition_system')
                     my_cursor = conn.cursor()
 
                     sql = "delete from Employee where ID = %s"
@@ -572,7 +572,7 @@ class Employee:
 
         else:
             try:
-                conn = mysql.connector.connect(host = 'localhost', username = 'root', password = '', database = 'facial_recognition_system')
+                conn = mysql.connector.connect(host = 'localhost', username = 'root', password = 'seensin', database = 'facial_recognition_system')
                 my_cursor = conn.cursor()
                 my_cursor.execute('select * from Employee')
                 myresult = my_cursor.fetchall()
@@ -609,7 +609,7 @@ class Employee:
 
 
                 #----------------------Load Predefined data on face frontals from CV2
-                face_classifier = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
+                face_classifier = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
 
                 def face_cropped(img):
                     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
@@ -632,7 +632,7 @@ class Employee:
 
                         face = cv2.resize(face_cropped(my_frame), (450, 450))
                         face = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY)
-                        file_name_path = "/home/elprofessor/Desktop/FACE RECOGNITION/data/user."+str(id)+"."+str(img_id)+".jpg"
+                        file_name_path = "data\ "+str('user') +"."+str(img_id)+ ".jpg"
                         cv2.imwrite(file_name_path, face)
                         cv2.putText(face, str(img_id),(50, 50), cv2.FONT_HERSHEY_COMPLEX, 2, (0, 255, 0), 2)
                         cv2.imshow('Crooped Face', face)
